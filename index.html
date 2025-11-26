@@ -1,203 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SuperSlasherGamez Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortex Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0d0a10;
+      color: white;
+      overflow-x: hidden;
+    }
 
-<style>
-/* ---- GENERAL ---- */
-body {
-    margin: 0;
-    padding: 40px;
-    font-family: 'Segoe UI', sans-serif;
-    color: #ffd8ee;
-    background: #0f0a0c;
-    background-image:
-        radial-gradient(circle at top left, rgba(255,0,128,0.25), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(255,0,128,0.15), transparent 60%);
-    overflow-x: hidden;
-}
+    /* Luxury Gradient Header */
+    header {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #ff4fd8 0%, #0d0a10 70%);
+      text-align: center;
+    }
 
-/* ---- HEADER ---- */
-.header {
-    text-align: center;
-    margin-bottom: 50px;
-}
+    h1 {
+      font-size: 4rem;
+      letter-spacing: -2px;
+      text-shadow: 0 0 30px #ff4fd8a8;
+      margin: 0;
+    }
 
-.header h1 {
-    font-size: 50px;
-    background: linear-gradient(90deg, #ff8ac8, #ff4fa1, #ff8ac8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-}
+    .section {
+      padding: 80px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
 
-/* ---- CARD ---- */
-.card {
-    background: rgba(255, 0, 128, 0.05);
-    border: 1px solid rgba(255, 0, 128, 0.25);
-    border-radius: 18px;
-    padding: 30px;
-    margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(255, 0, 128, 0.1);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-    opacity: 0;              /* start invisible */
-    transform: translateY(40px); /* start pushed down */
-}
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* visible state */
-.card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px #00000060;
+      transition: 0.3s;
+    }
 
-/* fade-away when scrolled past */
-.card.fade-out {
-    opacity: 0;
-    transform: translateY(-40px);
-}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 50px #ff4fd840;
+      border-color: #ff4fd860;
+    }
 
-/* ---- TITLES ---- */
-.card h2 {
-    color: #ff9bcc;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff9fe8;
+      text-shadow: 0 0 20px #ff4fd860;
+    }
 
-.card h3 {
-    color: #ffc5e6;
-    margin-top: 20px;
-    font-size: 22px;
-}
-
-/* ---- LIST ---- */
-.card ul {
-    margin: 5px 0 15px 20px;
-    line-height: 1.8;
-    font-size: 16px;
-}
-</style>
+    .footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>//DMA — Coding Portfolio</h1>
-</div>
+  <header>
+    <h1>Vortex – Developer Portfolio</h1>
+  </header>
 
-<!-- CARDS BELOW -->
-
-<div class="card">
+  <section class="section">
     <h2>Discord Bots</h2>
+    <div class="card">
+      <strong>Advanced Music Bot</strong><br><br>
+      • Smart queue system (408MB cap)<br>
+      • Live duration timer<br>
+      • 100% / 200% / 300% volume engine<br>
+      • Looping, skipping, preloading<br>
+      • Saved as .webm with anti-duplicate logic<br>
+      • Stylish embeds with buttons
+    </div>
+    <div class="card">
+      <strong>Gen Bot</strong><br><br>
+      • /gen & /vipgen<br>
+      • Multi‑file stock system (Fortnite.txt, TikTok.txt, etc.)<br>
+      • Dropdown UI<br>
+      • Zero duplication
+    </div>
+  </section>
 
-    <h3>Advanced Music Bot</h3>
-    <ul>
-        <li>Node.js, discord.js, ytdlp-nodejs, @discordjs/voice</li>
-        <li>Numbered .webm saving system (1.webm, 2.webm…)</li>
-        <li>Live duration timer updates every second</li>
-        <li>Loop mode without file deletion</li>
-        <li>Smart queue + auto retry</li>
-        <li>Background preloading</li>
-        <li>100% / 200% / 300% volume system</li>
-        <li>Storage cap logic (408.315494 MiB)</li>
-        <li>Modern embed UI + buttons</li>
-    </ul>
-
-    <h3>Generation Bot (gen / vipgen)</h3>
-    <ul>
-        <li>Reads stock from multiple sources (fortnite.txt, tiktok.txt, etc)</li>
-        <li>Normal & VIP stock folders</li>
-        <li>Dropdown menus + styled embeds</li>
-        <li>Ephemeral replies</li>
-        <li>Commands all inside a single index.js</li>
-    </ul>
-
-    <h3>Ticket + Utility Bot</h3>
-    <ul>
-        <li>Commands: /ticketsetup, /stock, /vipstock, /memberall, /addstock, /refresh</li>
-        <li>Clean UI + modern components</li>
-        <li>All logic handled inside index.js</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2>Roblox Development</h2>
-
-    <h3>Tower Defense Simulator-Style Game</h3>
-    <ul>
-        <li>GUI tower placement</li>
-        <li>Drag-and-drop movement</li>
-        <li>Coin reward system</li>
-        <li>Tower price + placement limits</li>
-        <li>Sleek UI system</li>
-    </ul>
-</div>
-
-<div class="card">
+  <section class="section">
     <h2>Minecraft Development</h2>
+    <div class="card">
+      <strong>ClearLag‑Style Plugin</strong><br><br>
+      • Built in Java<br>
+      • Entity cleanup<br>
+      • Performance optimisation
+    </div>
+  </section>
 
-    <h3>Custom Java Plugin</h3>
-    <ul>
-        <li>ClearLag-style optimisation plugin</li>
-        <li>Built in Visual Studio Code</li>
-        <li>Event handling + performance fixes</li>
-    </ul>
-</div>
+  <section class="section">
+    <h2>Roblox Development</h2>
+    <div class="card">
+      <strong>Tower Defense Game</strong><br><br>
+      • GUI tower placement<br>
+      • Drag‑and‑drop system<br>
+      • Coin system rewarding kills
+    </div>
+  </section>
 
-<div class="card">
-    <h2>Automation & Scripting</h2>
+  <section class="section">
+    <h2>Web & UI Projects</h2>
+    <div class="card">
+      <strong>//DMA Website</strong><br><br>
+      • Crypto + PayPal checkout<br>
+      • Admin panel with secure code access
+    </div>
+  </section>
 
-    <h3>Batch Tools</h3>
-    <ul>
-        <li>BAT script that trims the first character of each line</li>
-    </ul>
+  <div class="footer">© Vortex</div>
 
-    <h3>Makefile Basics</h3>
-    <ul>
-        <li>Understanding automated builds</li>
-    </ul>
-</div>
+  <script>
+    const sections = document.querySelectorAll('.section');
 
-<div class="card">
-    <h2>Hosting & Backend</h2>
-
-    <h3>Pterodactyl Hosting</h3>
-    <ul>
-        <li>Node.js bot hosting</li>
-        <li>Smart storage cleanup</li>
-        <li>Oversized download detection</li>
-    </ul>
-
-    <h3>Networking</h3>
-    <ul>
-        <li>Tunnels</li>
-        <li>RCON + IP safety</li>
-    </ul>
-</div>
-
-<script>
-const cards = document.querySelectorAll(".card");
-
-function checkVisibility() {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    cards.forEach(card => {
-        const box = card.getBoundingClientRect().top;
-
-        if (box < triggerBottom && box > -200) {
-            card.classList.add("visible");
-            card.classList.remove("fade-out");
-        } else if (box <= -200) {
-            card.classList.add("fade-out");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         } else {
-            card.classList.remove("visible");
+          entry.target.classList.remove('visible');
         }
-    });
-}
+      });
+    }, { threshold: 0.3 });
 
-window.addEventListener('scroll', checkVisibility);
-window.addEventListener('load', checkVisibility);
-</script>
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
