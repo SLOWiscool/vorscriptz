@@ -7,31 +7,26 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated Neon Grid Background */
-.animated-grid {
+/* Clean Animated Ambient Gradient Background */
+body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  background: repeating-linear-gradient(
-      to right,
-      rgba(255, 100, 220, 0.05) 0px,
-      rgba(255, 100, 220, 0.05) 2px,
-      transparent 2px,
-      transparent 80px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255, 100, 220, 0.05) 0px,
-      rgba(255, 100, 220, 0.05) 2px,
-      transparent 2px,
-      transparent 80px
-    );
-  animation: gridMove 20s linear infinite;
-  pointer-events: none;
+  background: radial-gradient(circle at 20% 20%, #ff4fd820, transparent 60%),
+              radial-gradient(circle at 80% 80%, #ff4fd810, transparent 70%),
+              linear-gradient(135deg, #0d0a10, #130a15);
+  filter: blur(80px);
+  animation: ambientMove 18s infinite alternate ease-in-out;
+  z-index: -1;
 }
 
-@keyframes gridMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-300px); }
+@keyframes ambientMove {
+  0% {
+    transform: translate(-40px, -20px) scale(1);
+  }
+  100% {
+    transform: translate(60px, 40px) scale(1.2);
+  }
 }
 
 /* Header Parallax */
@@ -87,7 +82,6 @@ header h1 {
   transition: 0.35s;
 }
 
-/* Hover effect */
 .card:hover {
   transform: translateY(-8px);
   border-color: #ff4fd8;
@@ -101,7 +95,6 @@ h2 {
   text-shadow: 0 0 30px #ff4fd8;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 40px;
