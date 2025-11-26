@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
   header.style.backgroundPositionY = `${offset}px`;
 });
 
-// Smooth glow pulse on hero
+// Glow pulse on title
 const title = document.querySelector("header h1");
 setInterval(() => {
   title.style.textShadow =
