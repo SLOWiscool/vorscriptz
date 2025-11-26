@@ -3,148 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vortex Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0d0a10;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    /* Luxury Gradient Header */
-    header {
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at top, #ff4fd8 0%, #0d0a10 70%);
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 4rem;
-      letter-spacing: -2px;
-      text-shadow: 0 0 30px #ff4fd8a8;
-      margin: 0;
-    }
-
-    .section {
-      padding: 80px 10%;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 30px;
-      margin-bottom: 30px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 40px #00000060;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 50px #ff4fd840;
-      border-color: #ff4fd860;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ff9fe8;
-      text-shadow: 0 0 20px #ff4fd860;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 40px;
-      opacity: 0.7;
-    }
-  </style>
+  <title>Vortex – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Vortex – Developer Portfolio</h1>
+  <div class="animated-grid"></div>
+
+  <header id="header">
+    <div class="hero-content">
+      <h1>Vortex</h1>
+      <p class="subtitle">Developer • Designer • Innovator</p>
+    </div>
   </header>
 
   <section class="section">
     <h2>Discord Bots</h2>
     <div class="card">
       <strong>Advanced Music Bot</strong><br><br>
-      • Smart queue system (408MB cap)<br>
-      • Live duration timer<br>
-      • 100% / 200% / 300% volume engine<br>
-      • Looping, skipping, preloading<br>
-      • Saved as .webm with anti-duplicate logic<br>
-      • Stylish embeds with buttons
+      • Smart queue (408MB cap)<br>
+      • Live timer<br>
+      • 100% / 200% / 300% volume<br>
+      • Loop, skip, preload<br>
+      • .webm logic + anti-duplicate<br>
+      • Luxury embeds + buttons
     </div>
+
     <div class="card">
       <strong>Gen Bot</strong><br><br>
-      • /gen & /vipgen<br>
-      • Multi‑file stock system (Fortnite.txt, TikTok.txt, etc.)<br>
+      • /gen + /vipgen<br>
+      • Multi-file stock (Fortnite.txt, TikTok.txt, etc.)<br>
       • Dropdown UI<br>
-      • Zero duplication
+      • Zero-dup logic
     </div>
   </section>
 
   <section class="section">
     <h2>Minecraft Development</h2>
     <div class="card">
-      <strong>ClearLag‑Style Plugin</strong><br><br>
-      • Built in Java<br>
+      <strong>ClearLag Plugin</strong><br><br>
+      • Java plugin<br>
       • Entity cleanup<br>
-      • Performance optimisation
+      • Performance optimised
     </div>
   </section>
 
   <section class="section">
     <h2>Roblox Development</h2>
     <div class="card">
-      <strong>Tower Defense Game</strong><br><br>
-      • GUI tower placement<br>
-      • Drag‑and‑drop system<br>
-      • Coin system rewarding kills
+      <strong>Tower Defense</strong><br><br>
+      • Drag & drop towers<br>
+      • GUI placement<br>
+      • Coin economy
     </div>
   </section>
 
   <section class="section">
-    <h2>Web & UI Projects</h2>
+    <h2>Web & UI</h2>
     <div class="card">
       <strong>//DMA Website</strong><br><br>
-      • Crypto + PayPal checkout<br>
-      • Admin panel with secure code access
+      • Crypto & PayPal checkout<br>
+      • Secure admin access
     </div>
   </section>
 
-  <div class="footer">© Vortex</div>
+  <footer>
+    <p>© Vortex</p>
+  </footer>
 
-  <script>
-    const sections = document.querySelectorAll('.section');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, { threshold: 0.3 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
-
+  <script src="index.js"></script>
 </body>
 </html>
