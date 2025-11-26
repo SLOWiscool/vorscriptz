@@ -3,161 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <title>SuperSlasherGamez Portfolio</title>
+
 <style>
-    body {
-        background: #1a0f15; /* dark faint pink */
-        font-family: 'Segoe UI', sans-serif;
-        color: #ffd8ee;
-        margin: 0;
-        padding: 40px;
-    }
+/* ---- GENERAL ---- */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffd8ee;
+    background: #0f0a0c;
+    background-image:
+        radial-gradient(circle at top left, rgba(255,0,128,0.25), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(255,0,128,0.15), transparent 60%);
+    overflow-x: hidden;
+}
 
-    .portfolio {
-        max-width: 800px;
-        margin: auto;
-        background: rgba(255, 0, 128, 0.05);
-        padding: 40px;
-        border-radius: 16px;
-        border: 1px solid rgba(255, 0, 128, 0.2);
-        box-shadow: 0 0 40px rgba(255, 0, 128, 0.15);
-    }
+/* ---- HEADER ---- */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-    h1 {
-        text-align: center;
-        font-size: 42px;
-        margin-bottom: 10px;
-        color: #ff9bcc;
-    }
+.header h1 {
+    font-size: 50px;
+    background: linear-gradient(90deg, #ff8ac8, #ff4fa1, #ff8ac8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
 
-    h2 {
-        margin-top: 30px;
-        font-size: 28px;
-        color: #ffb2dc;
-    }
+/* ---- CARD ---- */
+.card {
+    background: rgba(255, 0, 128, 0.05);
+    border: 1px solid rgba(255, 0, 128, 0.25);
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.1);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0;              /* start invisible */
+    transform: translateY(40px); /* start pushed down */
+}
 
-    h3 {
-        margin-top: 20px;
-        font-size: 20px;
-        color: #ffc5e6;
-    }
+/* visible state */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    p, li {
-        color: #ffd8ee;
-        line-height: 1.7;
-    }
+/* fade-away when scrolled past */
+.card.fade-out {
+    opacity: 0;
+    transform: translateY(-40px);
+}
 
-    ul {
-        margin-top: 6px;
-        padding-left: 20px;
-    }
+/* ---- TITLES ---- */
+.card h2 {
+    color: #ff9bcc;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
-    .section {
-        margin-bottom: 30px;
-    }
+.card h3 {
+    color: #ffc5e6;
+    margin-top: 20px;
+    font-size: 22px;
+}
 
+/* ---- LIST ---- */
+.card ul {
+    margin: 5px 0 15px 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
 </style>
 </head>
 <body>
 
-<div class="portfolio">
-
-    <h1>VorScriptz – Coding Portfolio</h1>
-
-    <!-- Discord Bots -->
-    <div class="section">
-        <h2>Discord Bots</h2>
-
-        <h3>Advanced Music Bot</h3>
-        <ul>
-            <li>Built with Node.js, discord.js, @discordjs/voice, ytdlp-nodejs, updated-youtube-info</li>
-            <li>Saves songs as numbered .webm files (1.webm, 2.webm…)</li>
-            <li>Live duration counter updating every second</li>
-            <li>Loop mode without redownloading</li>
-            <li>Smart queue system with auto-retry</li>
-            <li>Background song preloading</li>
-            <li>Volume levels: 100%, 200%, 300%</li>
-            <li>Storage limit enforcement (408.315494 MiB)</li>
-            <li>Stylish embed UI with play/pause/skip/loop + queue button</li>
-        </ul>
-
-        <h3>Generation Bot (gen / vipgen)</h3>
-        <ul>
-            <li>Reads stock from multiple files (fortnite.txt, tiktok.txt, etc)</li>
-            <li>Separate directories for normal & VIP stock</li>
-            <li>Dropdown menus + styled embeds</li>
-            <li>Ephemeral responses</li>
-            <li>No duplicate commands</li>
-            <li>All commands in a single index.js</li>
-        </ul>
-
-        <h3>Ticket & Utility Bot</h3>
-        <ul>
-            <li>Commands: /ticketsetup, /memberall, /stock, /vipstock, /addstock, /addvipstock, /refresh</li>
-            <li>Modern components + clean UI</li>
-            <li>Everything handled inside index.js</li>
-        </ul>
-    </div>
-
-    <!-- Roblox Projects -->
-    <div class="section">
-        <h2>Roblox Development</h2>
-
-        <h3>Tower Defense Simulator-style Game</h3>
-        <ul>
-            <li>GUI-based tower placement</li>
-            <li>Drag-and-drop tower movement</li>
-            <li>Coin reward system per enemy kill</li>
-            <li>Price limits for towers</li>
-            <li>Clean UI system</li>
-        </ul>
-    </div>
-
-    <!-- Minecraft Projects -->
-    <div class="section">
-        <h2>Minecraft Development</h2>
-
-        <h3>Custom Java Plugin</h3>
-        <ul>
-            <li>ClearLag-inspired plugin</li>
-            <li>Built in Visual Studio Code</li>
-            <li>Event handling + custom optimisation features</li>
-        </ul>
-    </div>
-
-    <!-- Automation -->
-    <div class="section">
-        <h2>Automation & Scripting</h2>
-
-        <h3>Batch Script Utility</h3>
-        <ul>
-            <li>BAT file that removes the first character of each line in a .txt file</li>
-        </ul>
-
-        <h3>Makefile Concepts</h3>
-        <ul>
-            <li>Understanding build automation and task simplification</li>
-        </ul>
-    </div>
-
-    <!-- Hosting -->
-    <div class="section">
-        <h2>Hosting & Backend</h2>
-
-        <h3>Pterodactyl Hosting</h3>
-        <ul>
-            <li>Running Discord bots through Node.js only</li>
-            <li>Managing storage limits</li>
-            <li>Smart audio file cleanup</li>
-            <li>Oversized download detection + blocking</li>
-        </ul>
-
-        <h3>Self-Hosting & Networking</h3>
-        <ul>
-            <li>Handling tunnels, IP exposure, and RCON access requirements</li>
-        </ul>
-    </div>
-
+<div class="header">
+    <h1>//DMA — Coding Portfolio</h1>
 </div>
+
+<!-- CARDS BELOW -->
+
+<div class="card">
+    <h2>Discord Bots</h2>
+
+    <h3>Advanced Music Bot</h3>
+    <ul>
+        <li>Node.js, discord.js, ytdlp-nodejs, @discordjs/voice</li>
+        <li>Numbered .webm saving system (1.webm, 2.webm…)</li>
+        <li>Live duration timer updates every second</li>
+        <li>Loop mode without file deletion</li>
+        <li>Smart queue + auto retry</li>
+        <li>Background preloading</li>
+        <li>100% / 200% / 300% volume system</li>
+        <li>Storage cap logic (408.315494 MiB)</li>
+        <li>Modern embed UI + buttons</li>
+    </ul>
+
+    <h3>Generation Bot (gen / vipgen)</h3>
+    <ul>
+        <li>Reads stock from multiple sources (fortnite.txt, tiktok.txt, etc)</li>
+        <li>Normal & VIP stock folders</li>
+        <li>Dropdown menus + styled embeds</li>
+        <li>Ephemeral replies</li>
+        <li>Commands all inside a single index.js</li>
+    </ul>
+
+    <h3>Ticket + Utility Bot</h3>
+    <ul>
+        <li>Commands: /ticketsetup, /stock, /vipstock, /memberall, /addstock, /refresh</li>
+        <li>Clean UI + modern components</li>
+        <li>All logic handled inside index.js</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Roblox Development</h2>
+
+    <h3>Tower Defense Simulator-Style Game</h3>
+    <ul>
+        <li>GUI tower placement</li>
+        <li>Drag-and-drop movement</li>
+        <li>Coin reward system</li>
+        <li>Tower price + placement limits</li>
+        <li>Sleek UI system</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Minecraft Development</h2>
+
+    <h3>Custom Java Plugin</h3>
+    <ul>
+        <li>ClearLag-style optimisation plugin</li>
+        <li>Built in Visual Studio Code</li>
+        <li>Event handling + performance fixes</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Automation & Scripting</h2>
+
+    <h3>Batch Tools</h3>
+    <ul>
+        <li>BAT script that trims the first character of each line</li>
+    </ul>
+
+    <h3>Makefile Basics</h3>
+    <ul>
+        <li>Understanding automated builds</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Hosting & Backend</h2>
+
+    <h3>Pterodactyl Hosting</h3>
+    <ul>
+        <li>Node.js bot hosting</li>
+        <li>Smart storage cleanup</li>
+        <li>Oversized download detection</li>
+    </ul>
+
+    <h3>Networking</h3>
+    <ul>
+        <li>Tunnels</li>
+        <li>RCON + IP safety</li>
+    </ul>
+</div>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+        const box = card.getBoundingClientRect().top;
+
+        if (box < triggerBottom && box > -200) {
+            card.classList.add("visible");
+            card.classList.remove("fade-out");
+        } else if (box <= -200) {
+            card.classList.add("fade-out");
+        } else {
+            card.classList.remove("visible");
+        }
+    });
+}
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
+</script>
 
 </body>
 </html>
