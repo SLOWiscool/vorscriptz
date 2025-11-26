@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SuperSlasherGamez Portfolio</title>
+<style>
+    body {
+        background: #1a0f15; /* dark faint pink */
+        font-family: 'Segoe UI', sans-serif;
+        color: #ffd8ee;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .portfolio {
+        max-width: 800px;
+        margin: auto;
+        background: rgba(255, 0, 128, 0.05);
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 0, 128, 0.2);
+        box-shadow: 0 0 40px rgba(255, 0, 128, 0.15);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 10px;
+        color: #ff9bcc;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 28px;
+        color: #ffb2dc;
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #ffc5e6;
+    }
+
+    p, li {
+        color: #ffd8ee;
+        line-height: 1.7;
+    }
+
+    ul {
+        margin-top: 6px;
+        padding-left: 20px;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="portfolio">
+
+    <h1>VorScriptz – Coding Portfolio</h1>
+
+    <!-- Discord Bots -->
+    <div class="section">
+        <h2>Discord Bots</h2>
+
+        <h3>Advanced Music Bot</h3>
+        <ul>
+            <li>Built with Node.js, discord.js, @discordjs/voice, ytdlp-nodejs, updated-youtube-info</li>
+            <li>Saves songs as numbered .webm files (1.webm, 2.webm…)</li>
+            <li>Live duration counter updating every second</li>
+            <li>Loop mode without redownloading</li>
+            <li>Smart queue system with auto-retry</li>
+            <li>Background song preloading</li>
+            <li>Volume levels: 100%, 200%, 300%</li>
+            <li>Storage limit enforcement (408.315494 MiB)</li>
+            <li>Stylish embed UI with play/pause/skip/loop + queue button</li>
+        </ul>
+
+        <h3>Generation Bot (gen / vipgen)</h3>
+        <ul>
+            <li>Reads stock from multiple files (fortnite.txt, tiktok.txt, etc)</li>
+            <li>Separate directories for normal & VIP stock</li>
+            <li>Dropdown menus + styled embeds</li>
+            <li>Ephemeral responses</li>
+            <li>No duplicate commands</li>
+            <li>All commands in a single index.js</li>
+        </ul>
+
+        <h3>Ticket & Utility Bot</h3>
+        <ul>
+            <li>Commands: /ticketsetup, /memberall, /stock, /vipstock, /addstock, /addvipstock, /refresh</li>
+            <li>Modern components + clean UI</li>
+            <li>Everything handled inside index.js</li>
+        </ul>
+    </div>
+
+    <!-- Roblox Projects -->
+    <div class="section">
+        <h2>Roblox Development</h2>
+
+        <h3>Tower Defense Simulator-style Game</h3>
+        <ul>
+            <li>GUI-based tower placement</li>
+            <li>Drag-and-drop tower movement</li>
+            <li>Coin reward system per enemy kill</li>
+            <li>Price limits for towers</li>
+            <li>Clean UI system</li>
+        </ul>
+    </div>
+
+    <!-- Minecraft Projects -->
+    <div class="section">
+        <h2>Minecraft Development</h2>
+
+        <h3>Custom Java Plugin</h3>
+        <ul>
+            <li>ClearLag-inspired plugin</li>
+            <li>Built in Visual Studio Code</li>
+            <li>Event handling + custom optimisation features</li>
+        </ul>
+    </div>
+
+    <!-- Automation -->
+    <div class="section">
+        <h2>Automation & Scripting</h2>
+
+        <h3>Batch Script Utility</h3>
+        <ul>
+            <li>BAT file that removes the first character of each line in a .txt file</li>
+        </ul>
+
+        <h3>Makefile Concepts</h3>
+        <ul>
+            <li>Understanding build automation and task simplification</li>
+        </ul>
+    </div>
+
+    <!-- Hosting -->
+    <div class="section">
+        <h2>Hosting & Backend</h2>
+
+        <h3>Pterodactyl Hosting</h3>
+        <ul>
+            <li>Running Discord bots through Node.js only</li>
+            <li>Managing storage limits</li>
+            <li>Smart audio file cleanup</li>
+            <li>Oversized download detection + blocking</li>
+        </ul>
+
+        <h3>Self-Hosting & Networking</h3>
+        <ul>
+            <li>Handling tunnels, IP exposure, and RCON access requirements</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
